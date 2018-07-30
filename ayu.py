@@ -1,15 +1,20 @@
-import credentials
+# import credentials
 from random import randint
+import time
+
 
 
 class Ayu:
     def __init__(self):
-        self.age = 0
-        self.hair_color = "brown"
+        self.age = 10
+        self.hair_color = "Brown"
         self.name = "Ayu Tskukimia"
+        self.height = 5
+        self.boobs = "None"
+
 
     def tanjoubi(self, number_of_years):
-        self.age += number_of_years
+        self.age -= number_of_years
         print("Happy Birthday! You are " + str(self.age) + " years old!")
 
 
@@ -32,20 +37,39 @@ rand = randint(0,1)
 print("Hi I'm Ayu")
 
 good_responses = ["good", "all right"]
+how_old_responses = ["how old are you", "how old are you?" "ikutsu",
+    "Nansai desu ka"]
+decrease = ("decrease age")
 
 Greeting = ["How are you", "You're Late!"]
-response = input(Greeting[rand] + "¥n")
+#attempting to add line break after each ayu response
+response = input(Greeting[rand])
 if response.lower() in good_responses:
     print("Uguu")
+    time.sleep(3)
+else:
+    print("Uguu")
+    time.sleep(3)
+
+
+response = input("I missed you, please take care of me")
+if response.lower() in how_old_responses:
+    print(ayu.age + 4)
+else:
+    if response.lower() in decrease:
+        while ayu.age <= 10:
+            ayu.tanjoubi(1)
+            if ayu.age == 5:
+                print("AAAH TOO YOUNG")
+                break
+    else:
+        print("Uguu")
 
 
 
 
-# while ayu.age >= 0:
-#     ayu.tanjoubi(1)
-#     if ayu.age == 10:
-#         print("AAAH")
-#         break
+
+
 
 #
 #
