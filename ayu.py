@@ -1,7 +1,6 @@
 # import credentials
 from random import randint
 import time
-import
 
 
 
@@ -34,16 +33,24 @@ def fuck_the_loli(name="Ayu", enjoying_it=True):
 
 ayu = Ayu()
 rand = randint(0,1)
+rand1 = randint(0,1)
 
-print("Hi I'm Ayu")
+
 
 good_responses = ["good", "all right"]
 how_old_responses = ["how old are you", "how old are you?" "ikutsu",
     "Nansai desu ka"]
-decrease = ("decrease age")
-
+decrease = ["decrease age"]
 Greeting = ["How are you", "You're Late!"]
 #attempting to add line break after each ayu response
+
+print("Hi I'm Ayu")
+time.sleep(1.5)
+print("what's your name?")
+init_response = input()
+
+
+
 response = input(Greeting[rand])
 if response.lower() in good_responses:
     print("Uguu")
@@ -52,19 +59,24 @@ else:
     print("Uguu")
     time.sleep(3)
 
-
-response = input("I missed you, please take care of me")
-if response.lower() in how_old_responses:
+negative_responses = ["no", "fuck you", "I can't"]
+response1 = input("I missed you, please take care of me, " + init_response)
+if response1.lower() in how_old_responses:
     print(ayu.age + 4)
 else:
-    if response.lower() in decrease:
+    if response1.lower() in decrease:
         while ayu.age <= 10:
             ayu.tanjoubi(1)
             if ayu.age == 5:
                 print("AAAH TOO YOUNG")
                 break
+    if response1.lower() in negative_responses:
+        print("You're Mean!")
     else:
         print("Uguu")
+
+response2 = input()
+if response2.lower()
 
 
 
